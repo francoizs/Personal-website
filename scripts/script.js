@@ -7,29 +7,33 @@ function toTop(){
     window.scrollTo({top:0,behavior:'smooth'})
 }
 
-const logo= document.querySelectorAll('.logo-main path');
+const nav = document.querySelector('nav');
+const nav_menu = document.querySelector('.nav-menu');
+const closemenu = document.querySelector('.closemenu');
+const openmenu = document.querySelector('.openmenu');
 
-console.log(logo);
-for (let i = 0; i < logo.length; i++) {
-    console.log(logo[i].getTotalLength());
+openmenu.addEventListener('click',show);
+closemenu.addEventListener('click',close);
+
+function show(){
+    
+    nav_menu.style.display='flex';
+    nav_menu.style.top='0';
+    setTimeout(function(){
+        nav.style.backgroundColor='#fff';
+
+    },500)
+
+    
 }
 
-const nav = document.querySelector('nav');
-const frontSection = document.querySelector('.front-section');
-
-const frontSectionOptions = {
-    rootMargin: '-45px 0px 0px 0px'
-};
-
-const frontSectionObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            nav.classList.add('nav-past');
-        } else {
-            nav.classList.remove('nav-past');
-        }
-    });
-    }, frontSectionOptions);
+function close(){
+    nav.style.backgroundColor='transparent';
+    nav_menu.style.top='-2000%';
+}
 
 
-frontSectionObserver.observe(frontSection);
+
+
+
+

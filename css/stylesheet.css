@@ -29,51 +29,54 @@ a:hover {
 }
 body {
     overflow-x: hidden;
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(37, 37, 37);
 }
 .tall {
     height: 60vh;
 }
 nav {
+    border-bottom: white 1px solid;
     font-family: 'Overpass', sans-serif;
-    background-color: white;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     font-weight: 900;
     z-index: 10000;
-    position: fixed;
+    position: fixed !important;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     height: 45px;
-    width: 100%;
-    transition: 400ms;
+    width: 100vw;
+    padding-bottom: 3.5rem;
 }
 nav ul {
     justify-content: space-around;
-    margin-top: 0.8rem;
+    margin-top: 1rem;
     display: flex;
-    height: 45px;
     width: 100%;
-    transition: 400ms;
 }
 .logo-img {
     margin-left: 5rem;
     margin-right: 20rem;
 }
-nav ul li {
-    
+#FD {
+    color: white;
+    cursor: context-menu;
     display: inline-block;
     margin: 0 1rem;
-    transition: 400ms;
+    font-size: 1.5rem;
+    margin-top: -0.3rem;
 }
 nav ul li a {
+    color: rgb(230, 230, 230);
+    transition: 50ms;
     position: relative;
-    color: rgb(88, 88, 88);
 }
 nav ul li a:after {
     content:"";
     position:absolute;
-    background-color:darkblue;
+    background-color:white;
     height:3px;
     width:0%;
     left:0;
@@ -84,26 +87,42 @@ nav ul li a:hover:after {
     width: 100%;
 }
 nav ul li a:hover {
-    color: black;
-}
-.main{
-    height: 1000vh;
-    width: 100%;
-}
-.main h1 {
-    font-family: 'Overpass', sans-serif;
-    font-weight: 900;
-    font-size: 3rem;
     color: white;
-    text-align: left;
-    transition: 20ms;
 }
-
-.main-text {
-    margin-left: 5rem;
+.icon {
+    font-size: 1.7rem;
+    margin-right: 2rem;
+}
+.mail {
+    margin-right: 0;
+}
+.icons {
+    display: none;
+}
+.main-desktop{
+    height: 1000vh;
+}
+.openmenu {
+    display: none;
+    margin: 20px;
+    cursor: pointer;
+}
+#francois-dieleman {
+    font-size: 1.2rem;
+    display: none;
+    margin: 16px 20px 20px 20px;
+    cursor: context-menu;
+    color: white;
+}
+.closemenu {
+    display: none;
+    margin: 20px;
+    cursor: pointer;
+}
+.main-desktop-text {
     cursor: context-menu;
 }
-.main #h2-small {
+.main-desktop #h2-small {
     font-family: 'Overpass', sans-serif;
     letter-spacing: 2px;
     font-weight: 700;
@@ -126,7 +145,7 @@ nav ul li a:hover {
 .green:hover {
     color: #157A6E;
 }
-.main .h2 {
+.main-desktop .h2 {
     font-family: 'Taviraj', sans-serif;
     letter-spacing: 2px;
     font-style: italic;
@@ -137,7 +156,7 @@ nav ul li a:hover {
 }
 .scrolltop {
     position: fixed;
-    bottom: 4rem;
+    bottom: 3rem;
     right: 3rem;
     z-index: 1000;
     cursor: pointer;
@@ -156,165 +175,469 @@ nav ul li a:hover {
 .scrolltop:hover {
     height: 52;
 }
-.logo-main {
-   animation: fill 1.6s ease forwards 1.3s;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 768px){
+    .main-desktop { 
+        display: none;
+    }
+    nav ul {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        transition: top 0.8s ease;
+        display: none;
+    }
+    #FD {
+        display: none;
+    }
+    .closemenu {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+    }
+    .openmenu {
+        display: block;
+    }
+    #francois-dieleman {
+        display: block;
+    }
+    nav ul li {
+        padding-bottom: 7rem;
+    }
+    .home-link {
+        padding-top: 7rem;
+    }
+    nav ul li a{
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: rgb(87, 87, 87);
+    }
+    nav ul li a:hover {
+        color: rgb(87, 87, 87);
+    }
+    .home-link a:hover {
+        color: black;
+    }
+    .about-link a:hover {
+        color: black;
+    }
+    .projects-link a:hover {
+        color: black;
+    }
+    .contact-link a:hover {
+        color: black;
+    }
+    nav ul li a:after {
+        display: none;
+    }
+    .icons  {
+        display:inherit;
+    }
+    .icon i{
+        transition: 200ms;
+    }
+    .bi-instagram:hover {
+        color: #9d26ff;
+    }
+    .bi-linkedin:hover {
+        color: blue;
+    }
+    .bi-dribbble:hover {
+        color: #ea4c89;
+    }
+    .bi-github:hover {
+        color: black;
+    }
+    .bi-envelope:hover {
+        color: #1178ff;
+    }
+    
+}
+
+
+.logo-main-desktop {
+   animation: fill 0.7s ease forwards 1.4s;
 }
 /* programmer & web developer animation */
-.logo-main path:nth-child(1) {
+.logo-main-desktop path:nth-child(1) {
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
     
     animation: line-anim 4s ease forwards 0.2s;
 }
-.logo-main path:nth-child(2) {
+.logo-main-desktop path:nth-child(2) {
     
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
     animation: line-anim 4s ease forwards 0.2s;
 }
-.logo-main path:nth-child(3) {
+.logo-main-desktop path:nth-child(3) {
     
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
     animation: line-anim 4s ease forwards 0.4s;
 }
-.logo-main path:nth-child(4) {
+.logo-main-desktop path:nth-child(4) {
     
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
     animation: line-anim 4s ease forwards 0.2s;
 }
-.logo-main path:nth-child(5) {
+.logo-main-desktop path:nth-child(5) {
     
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
     animation: line-anim 4s ease forwards 0.2s;
 }
-.logo-main path:nth-child(6) {
+.logo-main-desktop path:nth-child(6) {
     animation: line-anim 4s ease forwards 0.4s;
     
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(7) {
+.logo-main-desktop path:nth-child(7) {
     animation: line-anim 4s ease forwards 0.4s;
     
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(8) {
+.logo-main-desktop path:nth-child(8) {
     animation: line-anim 4s ease forwards 0.1s;
     
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(9) {
+.logo-main-desktop path:nth-child(9) {
     animation: line-anim 4s ease forwards 0.3s;
     
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(10) {
+.logo-main-desktop path:nth-child(10) {
     animation: line-anim 4s ease forwards ;
     
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(11) {
+.logo-main-desktop path:nth-child(11) {
     animation: line-anim 4s ease forwards 0.8s;
     
     stroke-width: 1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(12) {
+.logo-main-desktop path:nth-child(12) {
     
     stroke-width: 1;
     animation: line-anim 3s ease forwards 0.2s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(13) {
+.logo-main-desktop path:nth-child(13) {
     
     stroke-width: 1;
     animation: line-anim 4s ease forwards 0.2s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(14) {
+.logo-main-desktop path:nth-child(14) {
     
     stroke-width: 1;
     animation: line-anim 4s ease forwards 0.2s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(15) {
+.logo-main-desktop path:nth-child(15) {
     
     stroke-width: 1;
     animation: line-anim 4s ease forwards 0.4s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(16) {
+.logo-main-desktop path:nth-child(16) {
     
     stroke-width: 1;
     animation: line-anim 4s ease forwards 0.3s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(17) {
+.logo-main-desktop path:nth-child(17) {
     
     stroke-width: 1;
     animation: line-anim 4s ease forwards 0.2s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(18) {
+.logo-main-desktop path:nth-child(18) {
     
     stroke-width: 1;
     animation: line-anim 4s ease forwards 0.6s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(19) {
+.logo-main-desktop path:nth-child(19) {
     
     stroke-width: 1;
     animation: line-anim 4s ease forwards 0.4s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(20) {
+.logo-main-desktop path:nth-child(20) {
     
     stroke-width: 1;
     animation: line-anim 4s ease forwards 0.4s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(21) {
+.logo-main-desktop path:nth-child(21) {
     
     stroke-width: 1;
     animation: line-anim 4s ease forwards 0.2s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(22) {
+.logo-main-desktop path:nth-child(22) {
     
     stroke-width: 1;
     animation: line-anim 4s ease forwards 0.5s;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
 }
-.logo-main path:nth-child(23) {
+.logo-main-desktop path:nth-child(23) {
     animation: line-anim 4s ease forwards 0.2s;
     
     stroke-width: 1;
@@ -329,9 +652,10 @@ nav ul li a:hover {
 }
 @keyframes fill {
     from {
-        fill: darkblue;
+        fill: transparent;
     }
     to {
         fill: #fff;
     }
+
 }
