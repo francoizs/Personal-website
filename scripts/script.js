@@ -31,9 +31,3 @@ function close(){
     nav.style.backgroundColor='transparent';
     nav_menu.style.top='-2000%';
 }
-
-
-
-
-
-

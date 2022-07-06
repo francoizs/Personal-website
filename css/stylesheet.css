@@ -86,6 +86,9 @@ nav ul li a:after {
 nav ul li a:hover:after {
     width: 100%;
 }
+div {
+    color: rgb(80, 255, 159);
+}
 nav ul li a:hover {
     color: white;
 }
@@ -98,6 +101,12 @@ nav ul li a:hover {
 }
 .icons {
     display: none;
+}
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 .main-desktop{
     height: 1000vh;
@@ -120,6 +129,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 .main-desktop-text {
+    z-index: 100;
     cursor: context-menu;
 }
 .main-desktop #h2-small {
