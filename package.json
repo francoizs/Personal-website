@@ -1,7 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "dat.gui": "^0.7.9",
-    "three.js": "^0.77.1"
-  }
-}
