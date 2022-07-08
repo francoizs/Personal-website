@@ -33,12 +33,16 @@ function animatePoints(e) {
     mouseX = e.clientX
     mouseY = e.clientY
 }
-
+const projects_section = document.querySelector('.projects-section');
+projects_section.addEventListener('mousemove', stopLooking)
+let mouse_y = [];
+function stopLooking(e) {
+    mouse_y.push(e.clientY)
+}
 
 // animation function
 function animate() {
-    if (window.innerHeight > mouseY) {
-        console.log(window.innerHeight, mouseY)
+    if (mouse_y[mouse_y.length - 1] !== mouseY) {
         points.rotation.x = 0.0025 * (mouseY - window.innerHeight / 2);
         points.rotation.y = 0.0015 * (mouseX - window.innerWidth / 2);
     }

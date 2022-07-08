@@ -126,6 +126,9 @@ canvas {
     margin: 20px;
     cursor: pointer;
 }
+.main-desktop {
+    height: 40vh;
+}
 .main-desktop-text {
     z-index: 100;
     cursor: context-menu;
@@ -184,7 +187,9 @@ canvas {
 .scrolltop:hover {
     height: 52;
 }
-
+.projects-section {
+    height: 1000vh;
+}
 
 
 
