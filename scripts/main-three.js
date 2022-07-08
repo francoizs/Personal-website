@@ -1,41 +1,55 @@
-
-
-// scene, camera, canvas & renderer
+// scene, camera & renderer
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x252525);
+scene.background = new THREE.Color(0xFF5858);
 
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-camera.position.y = 2;
-camera.position.z = 5;
-camera.position.x = 2;
+camera.position.y = 0;
+camera.position.z = 0;
+camera.position.x = 0;
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
-var light=new THREE.PointLight(0xffffff,1,500)
-light.position.set(10,10,25)
-scene.add(light);
 
 // objects
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshPhongMaterial( { color: 'rgb(149,255,128)' } );
-const cube = new THREE.Mesh( geometry, material );
-cube.position.y = 0;
-cube.castShadow = true;
-scene.add( cube );
+for (var i = 0; i < 1; i++) {
+    const geometry = new THREE.RingGeometry( 1, 5, 1000, 3, 0, Math.PI * 2 );
+    var material = new THREE.PointsMaterial({
+        size: 0.015
+    });
+    var points = new THREE.Points( geometry, material );
+    points.position.x = -0.24;
+    points.position.y = -0.4;
+    points.position.z = -9;
+    scene.add( points );
+}
+
+// mouse
+document.addEventListener('mousemove', animatePoints)
+let mouseX = 0;
+let mouseY = 0;
+
+function animatePoints(e) {
+    mouseX = e.clientX
+    mouseY = e.clientY
+}
 
 
-
-
-
+// animation function
 function animate() {
+    if (window.innerHeight > mouseY) {
+        console.log(window.innerHeight, mouseY)
+        points.rotation.x = 0.0025 * (mouseY - window.innerHeight / 2);
+        points.rotation.y = 0.0015 * (mouseX - window.innerWidth / 2);
+    }
+    if (window.innerWidth < 768 ) {
+        points.position.x = 0
+    }
 	requestAnimationFrame( animate );
 	renderer.render( scene, camera );
 }
 animate();
+
 // resize
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;

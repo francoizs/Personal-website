@@ -43,7 +43,7 @@ nav {
     border-bottom-right-radius: 5px;
     font-weight: 900;
     z-index: 10000;
-    position: fixed !important;
+    position: fixed;
     display: flex;
     justify-content: space-around;
     height: 45px;
@@ -69,6 +69,7 @@ nav ul {
     margin-top: -0.3rem;
 }
 nav ul li a {
+    font-size: 1.1rem;
     color: rgb(230, 230, 230);
     transition: 50ms;
     position: relative;
@@ -107,9 +108,6 @@ canvas {
     top: 0;
     left: 0;
     z-index: -1;
-}
-.main-desktop{
-    height: 1000vh;
 }
 .openmenu {
     display: none;
@@ -156,6 +154,7 @@ canvas {
     color: #157A6E;
 }
 .main-desktop .h2 {
+    margin-bottom: 0rem;
     font-family: 'Taviraj', sans-serif;
     letter-spacing: 2px;
     font-style: italic;
@@ -407,6 +406,7 @@ canvas {
         display: none;
     }
     nav ul {
+        margin-top: 0rem;
         height: 100vh;
         position: fixed;
         top: 0;

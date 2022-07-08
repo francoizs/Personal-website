@@ -19,15 +19,8 @@ function show(){
     
     nav_menu.style.display='flex';
     nav_menu.style.top='0';
-    setTimeout(function(){
-        nav.style.backgroundColor='#fff';
-
-    },500)
-
-    
 }
 
 function close(){
-    nav.style.backgroundColor='transparent';
     nav_menu.style.top='-2000%';
 }
