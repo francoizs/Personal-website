@@ -42,12 +42,29 @@ function stopLooking(e) {
 
 // animation function
 function animate() {
-    if (mouse_y[mouse_y.length - 1] !== mouseY) {
-        points.rotation.x = 0.0025 * (mouseY - window.innerHeight / 2);
-        points.rotation.y = 0.0015 * (mouseX - window.innerWidth / 2);
+    if (window.innerWidth > 768) {
+        if (mouse_y[mouse_y.length - 1] !== mouseY) {
+            points.rotation.x = 0.0025 * (mouseY - window.innerHeight / 2);
+            points.rotation.y = 0.0015 * (mouseX - window.innerWidth / 2);
+        }
     }
-    if (window.innerWidth < 768 ) {
+    if (window.innerWidth <= 768 ) {
+        points.position.z = -9;
         points.position.x = 0
+        points.rotation.x += 0.005
+        points.rotation.y += 0.005
+    }
+    if (window.innerWidth <= 425 ) {
+        points.position.z = -13;
+        points.position.x = 0
+        points.rotation.x += 0.005
+        points.rotation.y += 0.005
+    }
+    if (window.innerWidth <= 375 ) {
+        points.position.z = -14;
+        points.position.x = 0
+        points.rotation.x += 0.0002
+        points.rotation.y += 0.0002
     }
 	requestAnimationFrame( animate );
 	renderer.render( scene, camera );

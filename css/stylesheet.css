@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500;600;700;800;900&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&family=Taviraj:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&display=swap');
 
-
-
+a {
+    text-decoration: none;
+    color: white;
+}
+button {
+    background-color: transparent;
+}
 ::-webkit-scrollbar {
     width: 8px;
   }
@@ -24,7 +29,7 @@
     list-style: none;
 }
 a:hover {
-
+    color: white;
     text-decoration: none;
 }
 body {
@@ -56,11 +61,8 @@ nav ul {
     display: flex;
     width: 100%;
 }
-.logo-img {
-    margin-left: 5rem;
-    margin-right: 20rem;
-}
 #FD {
+    padding-left: 1.6rem;
     color: white;
     cursor: context-menu;
     display: inline-block;
@@ -88,7 +90,7 @@ nav ul li a:hover:after {
     width: 100%;
 }
 div {
-    color: rgb(80, 255, 159);
+    color: white;
 }
 nav ul li a:hover {
     color: white;
@@ -156,7 +158,7 @@ canvas {
 .green:hover {
     color: #157A6E;
 }
-.main-desktop .h2 {
+.main-desktop #h2 {
     margin-bottom: 0rem;
     font-family: 'Taviraj', sans-serif;
     letter-spacing: 2px;
@@ -187,8 +189,174 @@ canvas {
 .scrolltop:hover {
     height: 52;
 }
+.main-mobile {
+    height: 100vh;
+    text-align: center;
+}
+.main-mobile-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.main-mobile #h2-small {
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Overpass', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    /* text-align: left; */
+}
+.main-mobile #h2 {
+    margin-left: 1.3rem;
+    color: white;
+    font-size: 1.6rem;
+    font-family: 'Taviraj', sans-serif;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: 900;
+    /* text-align: left; */
+}
+.main-mobile h1 {
+    max-width: 80vw;
+    line-height: 43px;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Overpass', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 900;
+    /* text-align: left; */
+}
 .projects-section {
-    height: 1000vh;
+    padding-top: 7rem;
+    height: 100vh;
+}
+.projects-section #h1 {
+    text-decoration: 2px underline #ff5858 solid;
+    margin-bottom: 0rem;
+    font-family: 'Taviraj', sans-serif;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 3rem;
+    color: white;
+    text-align: left;
+}
+.projects-section #h2 {
+    margin-top: 15rem;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+.button-projects {
+    margin-top: 19rem;
+    text-align: center;
+}
+.button-projects a {
+    padding: 5px 13px;
+    border: white solid 2px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 300ms;
+}
+.button-projects a:hover {
+    background-color: #ff5858;
+    color: white;
+    border: #ff5858 solid 2px;
+}
+hr {
+    width: 70vw;
+    margin-top: 7rem;
+    padding-bottom: 7rem;
+    border-top: 1px dashed rgb(224, 224, 224);
+    margin-left: 15vw;
+}
+/* .about-me-section {
+    padding-top: 4rem;
+} */
+.about-me-section #h1 {
+    text-decoration: 2px underline #ff5858 solid;
+    margin-bottom: 1rem;
+    font-family: 'Taviraj', sans-serif;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 3rem;
+    color: white;
+    text-align: left;
+}
+.me-img {
+    margin-left: 1rem;
+    background-image: url(../images/Me-window.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* height: 30vh; */
+}
+.vl {
+    border-left: 1px solid rgb(224, 224, 224);
+    height: 80vh;
+}
+.hr-2 {
+    width: 70vw;
+    margin-top: 7rem;
+    padding-bottom: 7rem;
+    border-top: 1px dashed rgb(224, 224, 224);
+    margin-left: 15vw;
+}
+.contact-section #h1 {
+    text-decoration: 2px underline #ff5858 solid;
+    margin-bottom: 1rem;
+    font-family: 'Taviraj', sans-serif;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+.about-me-content {
+    margin-top: 10rem;
+}
+
+.input-container {
+    width: 50%;
+    margin: 2rem 0;
+}
+.input {
+    color: white;
+    width:100%;
+    outline:none;
+    border:2px solid white;
+    background: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 7px;
+}
+.submit-button {
+    padding: 5px 13px;
+    border: white solid 2px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 300ms;
+}
+.submit-button:hover {
+    background-color: #ff5858;
+    color: white;
+    border: #ff5858 solid 2px;
 }
 
 
@@ -385,28 +553,42 @@ canvas {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (min-width: 769px) {
+    .main-mobile {
+        display: none;
+    }
+}
 @media(max-width: 768px){
+    .about-me-content {
+        margin-top: 0;
+    }
+    .me-img {
+        margin-left: 0;
+        margin-top: 2rem;
+        height: 80vh;
+        width: 100%;
+    }
+    hr{
+        margin-top: 0;
+    }
+    .vl {
+        display: none;
+    }
+    .projects-section {
+        padding-top: 7rem;
+    }
+    .projects-section #h1 {
+        font-size: 2rem;
+    }
+    .about-me-section #h1 {
+        font-size: 2rem;
+    }
+    .contact-section #h1 {
+        font-size: 2rem;
+    }
+    .tall {
+        display: none;
+    }
     .main-desktop { 
         display: none;
     }
@@ -463,6 +645,9 @@ canvas {
     .projects-link a:hover {
         color: black;
     }
+    .contact-link {
+        margin-bottom: 5rem;
+    }
     .contact-link a:hover {
         color: black;
     }
@@ -470,7 +655,8 @@ canvas {
         display: none;
     }
     .icons  {
-        display:inherit;
+        padding-bottom: 0;
+        display:block;
     }
     .icon i{
         transition: 200ms;
@@ -490,7 +676,9 @@ canvas {
     .bi-envelope:hover {
         color: #1178ff;
     }
-    
+    .scrolltop {
+        display: none;
+    }
 }
 
 

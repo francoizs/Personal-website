@@ -7,6 +7,10 @@ function toTop(){
     window.scrollTo({top:0,behavior:'smooth'})
 }
 
+
+
+
+
 const nav = document.querySelector('nav');
 const nav_menu = document.querySelector('.nav-menu');
 const closemenu = document.querySelector('.closemenu');

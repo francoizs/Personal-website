@@ -46,7 +46,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col main-desktop-text" >
-                        <h2 class="h2">Hi, <br> I'm Francois Dieleman</h2>
+                        <h2 id="h2">Hi, <br> I'm Francois Dieleman</h2>
                         <svg class="logo-main-desktop" width="678" height="55" viewBox="0 0 678 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.74402 40V6.39999H18.384C21.232 6.39999 23.504 6.92799 25.2 7.98399C26.896 9.024 28.112 10.36 28.848 11.992C29.584 13.624 29.952 15.328 29.952 17.104C29.952 18.336 29.736 19.584 29.304 20.848C28.872 22.096 28.192 23.248 27.264 24.304C26.352 25.344 25.16 26.184 23.688 26.824C22.216 27.464 20.448 27.784 18.384 27.784H10.656V40H3.74402ZM10.656 21.28H18.672C19.68 21.28 20.488 21.072 21.096 20.656C21.704 20.24 22.144 19.712 22.416 19.072C22.688 18.416 22.824 17.76 22.824 17.104C22.824 16.496 22.696 15.872 22.44 15.232C22.2 14.576 21.776 14.024 21.168 13.576C20.56 13.128 19.728 12.904 18.672 12.904H10.656V21.28Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1_101_3)"/>
                             <path d="M34.422 40V15.472H41.022V17.92C41.422 17.072 42.094 16.36 43.038 15.784C43.998 15.192 44.966 14.896 45.942 14.896C47.766 14.896 49.302 15.552 50.55 16.864L49.662 22.888C48.958 22.28 48.286 21.856 47.646 21.616C47.006 21.376 46.286 21.256 45.486 21.256C44.542 21.256 43.734 21.472 43.062 21.904C42.406 22.32 41.902 22.936 41.55 23.752C41.198 24.568 41.022 25.552 41.022 26.704V40H34.422Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1_101_3)"/>
@@ -80,9 +80,76 @@
             </div>
         
     </section>
+    
+    <section class="main-mobile">
+        <div class="main-mobile-content ">
+            <h2 id="h2">Hi, <br> I'm Francois Dieleman</h2>
+            <h1>Programmer & Web Developer</h1>
+            <h2 id="h2-small">(I create websites)</h2>
+        </div>
+    </section>
     <section class="projects-section">
         <div class="container">
-            
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="projects-section-content">
+                        <h1 id="h1">Projects</h1>
+                        <h2 id="h2">Coming soon...</h2>
+                        <h3 class="button-projects" id="h3"><a href="">Let's make one of our own</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="about-me-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md about-me-content">
+                        <h1 id="h1">About me</h1>
+                        <p>
+                            I'm a Programmer and Web Developer from the Netherlands 
+                            who loves to create websites. I'm always looking for new projects to work on. <br>
+                            Right now I'm studying Software Development at the
+                            <a style="color: orange;" href="https://www.hanze.nl/eng" target="_blank">Hanzehogeschool</a>.
+                            I Built my websites with HTML, CSS and Javascript. But most of the time I use the React framework.
+                            If you're interested in making a website or project together click <a style="color: lightblue;" href="#">here</a>.
+
+                        </p>
+                </div>
+                <div class="vl">
+
+                </div>
+                <div class="col-md me-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="hr-2">
+    <section class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="contact-section-content ">
+                        <h1 id="h1">Contact</h1>
+                    </div>
+                    <form class="">
+                        <div class="mx-auto input-container">
+                            <input class="input" type="text" id="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="mx-auto input-container">
+                            <input class="input" type="email" id="email" placeholder="Email adress" required>
+                        </div>
+                        <div class="mx-auto input-container">
+                            <textarea class="input" name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="mx-auto input-container text-center">
+                            <button class="submit-button" type="submit">Send</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -96,10 +163,9 @@
 
 
 
-
-
     <script src="../scripts/script.js"></script>
     <script type="module" src="../scripts/main-three.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.js" integrity="sha512-iaZ8D6RzguOWQ+B5SLJCHPid3/2UaVIFnsNJHy068pv3r5G6kYOe+XufLqd6qNrQmaHeYR0iVyu2xkXB2llnMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- <script type="text/javascript" src="https://unpkg.com/three-orbitcontrols@2.110.3/OrbitControls.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
