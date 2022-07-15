@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500;600;700;800;900&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&family=Taviraj:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&display=swap');
-
+html{scroll-behavior:smooth}
 a {
     text-decoration: none;
     color: white;
@@ -62,7 +62,7 @@ nav ul {
     width: 100%;
 }
 #FD {
-    padding-left: 1.6rem;
+    padding-right: 1.4rem;
     color: white;
     cursor: context-menu;
     display: inline-block;
@@ -85,6 +85,9 @@ nav ul li a:after {
     left:0;
     bottom:-3px;
     transition: 300ms;
+}
+.nav-link {
+    padding: 0;
 }
 nav ul li a:hover:after {
     width: 100%;
@@ -122,6 +125,7 @@ canvas {
     margin: 16px 20px 20px 20px;
     cursor: context-menu;
     color: white;
+    font-weight: 700;
 }
 .closemenu {
     display: none;
@@ -248,7 +252,7 @@ canvas {
     font-family: 'Fira Sans Condensed', sans-serif;
     letter-spacing: 2px;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: white;
     text-align: center;
 }
@@ -280,9 +284,6 @@ hr {
     border-top: 1px dashed rgb(224, 224, 224);
     margin-left: 15vw;
 }
-/* .about-me-section {
-    padding-top: 4rem;
-} */
 .about-me-section #h1 {
     text-decoration: 2px underline #ff5858 solid;
     margin-bottom: 1rem;
@@ -313,6 +314,9 @@ hr {
     border-top: 1px dashed rgb(224, 224, 224);
     margin-left: 15vw;
 }
+.contact-section {
+    padding-bottom: 3rem;
+}
 .contact-section #h1 {
     text-decoration: 2px underline #ff5858 solid;
     margin-bottom: 1rem;
@@ -325,9 +329,8 @@ hr {
     text-align: center;
 }
 .about-me-content {
-    margin-top: 10rem;
+    transform: translateY(30%);
 }
-
 .input-container {
     width: 50%;
     margin: 2rem 0;
@@ -358,10 +361,51 @@ hr {
     color: white;
     border: #ff5858 solid 2px;
 }
-
-
-
-
+.footer {
+    padding-top: 2rem;
+    background-color: rgb(44, 44, 44);
+}
+.icon-wrapper {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.icon-footer {
+    margin: 0px 0.8rem;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+.icon-footer i {
+    transition: 300ms;
+}
+.footer #p {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-align: center;
+}
+.bi-instagram:hover {
+    color: #9d26ff;
+}
+.bi-linkedin:hover {
+    color: rgb(50, 50, 255);
+}
+.bi-dribbble:hover {
+    color: #ea4c89;
+}
+.bi-github:hover {
+    color: rgb(0, 0, 0);
+}
+.bi-envelope:hover {
+    color: #1178ff;
+}
+.footer #p a {
+    transition: 200ms;
+}
+.footer #p a:hover {
+    color: #dddddd;
+}
 
 
 
@@ -559,8 +603,29 @@ hr {
     }
 }
 @media(max-width: 768px){
+    .projects-section #h2 {
+        margin-top: 8rem;
+    }
+    .button-projects {
+        margin-top: 40vh;
+    }
+    hr {
+        padding-bottom: 3rem;
+    }
+    .hr-2 {
+        padding-bottom: 3rem;
+    }
+    .input {
+        padding: 0.4rem 1.1rem;
+        font-size: 0.9rem;
+    }
+    .input-container {
+        width: 80%;
+        margin: 1.5rem 0;
+    }
     .about-me-content {
         margin-top: 0;
+        transform: translateY(0%);
     }
     .me-img {
         margin-left: 0;
@@ -622,11 +687,9 @@ hr {
     #francois-dieleman {
         display: block;
     }
-    nav ul li {
-        padding-bottom: 7rem;
-    }
-    .home-link {
-        padding-top: 7rem;
+    nav ul  {
+        padding-top: 2rem;
+        justify-content: space-around ;
     }
     nav ul li a{
         font-weight: 700;
@@ -645,9 +708,6 @@ hr {
     .projects-link a:hover {
         color: black;
     }
-    .contact-link {
-        margin-bottom: 5rem;
-    }
     .contact-link a:hover {
         color: black;
     }
@@ -655,7 +715,6 @@ hr {
         display: none;
     }
     .icons  {
-        padding-bottom: 0;
         display:block;
     }
     .icon i{
@@ -678,6 +737,27 @@ hr {
     }
     .scrolltop {
         display: none;
+    }
+}
+@media (max-width: 425px) {
+    .footer #p {
+        font-size: 0.9rem;
+    }
+    .input-container {
+        width: 90%;
+        margin: 1.5rem 0;
+    }
+    .icon-footer{
+        font-size: 1.3rem;
+        margin: 0px 0.8rem;
+    }
+}
+@media (max-width: 382px) {
+    .main-mobile h1 {
+        font-size: 2rem;
+    }
+    .main-mobile #h2 {
+        font-size: 1.3rem;
     }
 }
 

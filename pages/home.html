@@ -13,18 +13,18 @@
     <img onclick="toTop()" class="scrolltop" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACWElEQVRoge2YvU8VQRTFf5GHxAYbjbwaCFAoNn5EaTHGDhv9K4gh/gMGE7HC3phooyaaaKXGWNoppS02PjQolAhmAYs9mzesu7NfMy+YNyeZ7Oyde8+95+3szOyDgICAgH7CUeA+sAZ0gCXZfMV5wxKwn2r3PMZ5Q0dFXAJm1O94jPOG5NfMu3cdl4sjTYIPE4KQw4a+FTIELAObwLr7clgX9zKO9xWz8E1ghX/Xf5erltlWjLyVhZk7rq1wc/13KSTNmyWs1Ekga8etUrirfaSMMOtJIGvHrVK4ayHp+9IngaaF+xaSm6dVkPBjKqDovi6c52l65qn7RBrn6dsNsSxmLWNXPOU8gKaPPDI47mSMLxrjUYM8hXU2FXIcuA38Ec9VY+yabDvAgnzrwruQBLfE896wfZBt3gF/z4ScFM8vw7Yh2wkH/D0Tckw8W4ZtW7YhB/w9W35P6bph2JJ+20dCX0LO6/rFsCX9cz4S+hJyU9c3hu2trjc85TwAF+/ICPH7EKmfoC3bNt2pVxc9edkfieNFxthLjT1smKOwzl05FJ2K8zAjjh1gNGN8XGMRcLlmjhZxjbs2pzU5na6RYBhYVfyixe+ufFYVUxXTlPiweiKnpxXJB4DXiv0MDFp8B4FP8n1F9QXnuWIf25ymgN90xZzBPs0GgLPAO8X8BMZKFDMm333i1WxaXHloyecZ3Y12oijJdbpiqrTvwIUSIhJcBH7UyLMFzJVNMkk8zTrAnoU0Ar4S/+80kslkRxt4IA7zEyDd9oBvxNOp8EkEBAQEBAQE/O/4C01tRG0xwGS2AAAAAElFTkSuQmCC">
     <section class="navigation">
         <nav>
-            <div id="francois-dieleman">Francois Dieleman</div>
+            <div id="francois-dieleman">FD</div>
             <div class="openmenu"><img height="20" src="../images/kindpng_303160.png" alt=""></div>
             <ul class="nav-menu">
-                <li class="home-link"><a  href="home.html">Home</a></li>
-
-                <li class="about-link"><a href="#">About</a></li>
+                <li class="home-link nav-link"><a  href="#top">Home</a></li>
+                
+                <li class="projects-link  nav-link"><a href="#projects">Projects</a></li>
 
                 <li id="FD">FD</li>
 
-                <li class="projects-link"><a href="projects.html">Projects</a></li>
+                <li class="about-link nav-link"><a href="#about">About</a></li>
 
-                <li class="contact-link"><a href="#">Contact</a></li>
+                <li class="contact-link nav-link"><a href="#contact">Contact</a></li>
 
                 <li class="icons">
                     <a class="icon" href="https://www.instagram.com/francoisdlmn/" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -40,8 +40,8 @@
         </nav>
     </section>
     <div class="container tall" style="color: black;">o </div>
-    <canvas class="webgl"></canvas>
-    <section class="main-desktop">
+    <canvas id="top"  class="webgl"></canvas>
+    <section class="main-desktop" id="haha">
         
             <div class="container">
                 <div class="row">
@@ -88,12 +88,14 @@
             <h2 id="h2-small">(I create websites)</h2>
         </div>
     </section>
-    <section class="projects-section">
+    <section id="projects" class="projects-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="projects-section-content">
                         <h1 id="h1">Projects</h1>
+                    </div>
+                    <div class="below-projects">
                         <h2 id="h2">Coming soon...</h2>
                         <h3 class="button-projects" id="h3"><a href="">Let's make one of our own</a></h3>
                     </div>
@@ -101,7 +103,7 @@
             </div>
         </div>
     </section>
-    <hr>
+    <hr id="about">
     <section class="about-me-section">
         <div class="container">
             <div class="row">
@@ -125,7 +127,7 @@
             </div>
         </div>
     </section>
-    <hr class="hr-2">
+    <hr id="contact" class="hr-2">
     <section class="contact-section">
         <div class="container">
             <div class="row justify-content-center">
@@ -133,7 +135,7 @@
                     <div class="contact-section-content ">
                         <h1 id="h1">Contact</h1>
                     </div>
-                    <form class="">
+                    <form onsubmit="">
                         <div class="mx-auto input-container">
                             <input class="input" type="text" id="name" placeholder="Full Name" required>
                         </div>
@@ -144,10 +146,28 @@
                             <textarea class="input" name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                         </div>
                         <div class="mx-auto input-container text-center">
-                            <button class="submit-button" type="submit">Send</button>
+                            <button class="submit-button" onclick="sendEmail(), reset()" type="submit">Send</button>
                         </div>
                         
                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="footer-content">
+                        <div class="icon-wrapper">
+                            <a class="icon-footer" href="https://www.instagram.com/francoisdlmn/" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a class="icon-footer" href="https://www.linkedin.com/in/francois-dieleman-b1976a227/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a class="icon-footer" href="https://dribbble.com/Francoizs" target="_blank"><i class="bi bi-dribbble"></i></a>
+                            <a class="icon-footer" href="https://github.com/francoizs" target="_blank"><i class="bi bi-github"></i></a>
+                            <a class="icon-footer" href="mailto:francoisdiel@hotmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+                        </div>
+                        <p id="p"><a href="#">Francois Dieleman</a> &copy; 2022</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -162,12 +182,10 @@
 
 
 
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="../scripts/script.js"></script>
     <script type="module" src="../scripts/main-three.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.js" integrity="sha512-iaZ8D6RzguOWQ+B5SLJCHPid3/2UaVIFnsNJHy068pv3r5G6kYOe+XufLqd6qNrQmaHeYR0iVyu2xkXB2llnMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="https://unpkg.com/three-orbitcontrols@2.110.3/OrbitControls.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
