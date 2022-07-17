@@ -1,12 +1,23 @@
+// scroll to top
+let scroll = document.querySelector('.scrollTop');
 window.addEventListener('scroll',function(){
-        var scroll=document.querySelector('.scrollTop');
-        scroll.classList.toggle("active",window.scrollY>400)
+    scroll.classList.toggle("active",window.scrollY>400)
     })
 
 function toTop(){
     window.scrollTo({top:0,behavior:'smooth'})
 }
 
+
+// navigation: top link changes when going to smaller screens
+let top_link = document.querySelector('.top-link');
+if (window.innerHeight < 768) {
+  top_link.href = '#top-mobile';
+  console.log(top_link.href)
+}
+
+
+// The function that send the contact from to my email
 function sendEmail(){
   if (document.getElementById('email').value !== '' && document.getElementById('message').value !== '' && document.getElementById('name').value !== '') {
     Email.send({
@@ -31,8 +42,8 @@ function sendEmail(){
   }
 }
 
-console.log(document.getElementById('message').value);
 
+// navigation: mobile menu
 const nav = document.querySelector('nav');
 const nav_menu = document.querySelector('.nav-menu');
 const closemenu = document.querySelector('.closemenu');
@@ -55,3 +66,48 @@ function show(){
 function close(){
     nav_menu.style.top='-2000%';
 }
+
+
+// onscroll animation
+const fade_ins = document.querySelectorAll('.fade-in');
+const sliders = document.querySelectorAll('.slider');
+
+const appear_fade_in_options = {
+  rootMargin: "0px 0px -100px 0px"
+}
+const appear_slider_options = {
+  rootMargin: "0px 0px -400px 0px"
+}
+
+const appearOnScrollFadeIn = new IntersectionObserver(function(entries, appearOnScrollFadeIn){
+  entries.forEach(entry => {
+    if(!entry.isIntersecting){
+      return;
+    }
+    else {
+      entry.target.classList.add('on-scroll-active');
+      appearOnScrollFadeIn.unobserve(entry.target);
+    }
+  })
+}, appear_fade_in_options);
+
+const appearOnScrollSlider = new IntersectionObserver(function(entries, appearOnScrollSlider){
+  entries.forEach(entry => {
+    if(!entry.isIntersecting){
+      return;
+    }
+    else {
+      entry.target.classList.add('on-scroll-active');
+      appearOnScrollSlider.unobserve(entry.target);
+    }
+  })
+}, appear_slider_options);
+
+
+fade_ins.forEach(fade_in => {
+  appearOnScrollFadeIn.observe(fade_in);
+});
+
+sliders.forEach(slider => {
+  appearOnScrollSlider.observe(slider);
+});

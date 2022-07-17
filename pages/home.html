@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/stylesheet.css">
-    <link rel="icon" href="../images/man-working-on-the-laptop-as-freelancer-2407294-2012361.png">
+    <link rel="icon" href="../images/FD.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <title>Francois Dieleman</title>
 </head>
@@ -13,10 +13,10 @@
     <img onclick="toTop()" class="scrolltop" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACWElEQVRoge2YvU8VQRTFf5GHxAYbjbwaCFAoNn5EaTHGDhv9K4gh/gMGE7HC3phooyaaaKXGWNoppS02PjQolAhmAYs9mzesu7NfMy+YNyeZ7Oyde8+95+3szOyDgICAgH7CUeA+sAZ0gCXZfMV5wxKwn2r3PMZ5Q0dFXAJm1O94jPOG5NfMu3cdl4sjTYIPE4KQw4a+FTIELAObwLr7clgX9zKO9xWz8E1ghX/Xf5erltlWjLyVhZk7rq1wc/13KSTNmyWs1Ekga8etUrirfaSMMOtJIGvHrVK4ayHp+9IngaaF+xaSm6dVkPBjKqDovi6c52l65qn7RBrn6dsNsSxmLWNXPOU8gKaPPDI47mSMLxrjUYM8hXU2FXIcuA38Ec9VY+yabDvAgnzrwruQBLfE896wfZBt3gF/z4ScFM8vw7Yh2wkH/D0Tckw8W4ZtW7YhB/w9W35P6bph2JJ+20dCX0LO6/rFsCX9cz4S+hJyU9c3hu2trjc85TwAF+/ICPH7EKmfoC3bNt2pVxc9edkfieNFxthLjT1smKOwzl05FJ2K8zAjjh1gNGN8XGMRcLlmjhZxjbs2pzU5na6RYBhYVfyixe+ufFYVUxXTlPiweiKnpxXJB4DXiv0MDFp8B4FP8n1F9QXnuWIf25ymgN90xZzBPs0GgLPAO8X8BMZKFDMm333i1WxaXHloyecZ3Y12oijJdbpiqrTvwIUSIhJcBH7UyLMFzJVNMkk8zTrAnoU0Ar4S/+80kslkRxt4IA7zEyDd9oBvxNOp8EkEBAQEBAQE/O/4C01tRG0xwGS2AAAAAElFTkSuQmCC">
     <section class="navigation">
         <nav>
-            <div id="francois-dieleman">FD</div>
+            <div id="francois-dieleman"><a href="home.html">FD</a></div>
             <div class="openmenu"><img height="20" src="../images/kindpng_303160.png" alt=""></div>
             <ul class="nav-menu">
-                <li class="home-link nav-link"><a  href="#top">Home</a></li>
+                <li class="home-link nav-link"><a class="top-link" href="#top">Home</a></li>
                 
                 <li class="projects-link  nav-link"><a href="#projects">Projects</a></li>
 
@@ -39,11 +39,11 @@
            
         </nav>
     </section>
-    <div class="container tall" style="color: black;">o </div>
-    <canvas id="top"  class="webgl"></canvas>
-    <section class="main-desktop" id="haha">
+    <div id="top" class="container tall" style="color: black;">o </div>
+    <canvas class="webgl"></canvas>
+    <section class="main-desktop">
         
-            <div class="container">
+            <div class="container main-container">
                 <div class="row">
                     <div class="col main-desktop-text" >
                         <h2 id="h2">Hi, <br> I'm Francois Dieleman</h2>
@@ -81,7 +81,7 @@
         
     </section>
     
-    <section class="main-mobile">
+    <section id="top-mobile" class="main-mobile">
         <div class="main-mobile-content ">
             <h2 id="h2">Hi, <br> I'm Francois Dieleman</h2>
             <h1>Programmer & Web Developer</h1>
@@ -89,15 +89,15 @@
         </div>
     </section>
     <section id="projects" class="projects-section">
-        <div class="container">
+        <div class="container project-container">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="projects-section-content">
-                        <h1 id="h1">Projects</h1>
+                        <h1 class="fade-in" id="h1">Projects</h1>
                     </div>
                     <div class="below-projects">
-                        <h2 id="h2">Coming soon...</h2>
-                        <h3 class="button-projects" id="h3"><a href="">Let's make one of our own</a></h3>
+                        <h2 class="fade-in" id="h2">Coming soon...</h2>
+                        <h3 class="button-projects " id="h3"><a href="">Let's make one of our own</a></h3>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
     <section class="about-me-section">
         <div class="container">
             <div class="row">
-                <div class="col-md about-me-content">
+                <div class="col-md about-me-content from-left slider">
                         <h1 id="h1">About me</h1>
                         <p>
                             I'm a Programmer and Web Developer from the Netherlands 
@@ -115,14 +115,14 @@
                             Right now I'm studying Software Development at the
                             <a style="color: orange;" href="https://www.hanze.nl/eng" target="_blank">Hanzehogeschool</a>.
                             I Built my websites with HTML, CSS and Javascript. But most of the time I use the React framework.
-                            If you're interested in making a website or project together click <a style="color: lightblue;" href="#">here</a>.
+                            If you're interested in making a website or project together click <a style="color: lightblue;" href="#contact">here</a>.
 
                         </p>
                 </div>
                 <div class="vl">
 
                 </div>
-                <div class="col-md me-img">
+                <div class="col-md me-img from-right slider">
                 </div>
             </div>
         </div>

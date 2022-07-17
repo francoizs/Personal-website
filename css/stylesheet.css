@@ -1,12 +1,7 @@
+/* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500;600;700;800;900&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&family=Taviraj:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&display=swap');
-html{scroll-behavior:smooth}
-a {
-    text-decoration: none;
-    color: white;
-}
-button {
-    background-color: transparent;
-}
+
+/* scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
   }
@@ -20,6 +15,19 @@ button {
     background: linear-gradient(to right, rgb(145, 145, 145), rgb(145, 145, 145)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 0px;
 }
+
+/* main css */
+html{
+    scroll-behavior:smooth
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+button {
+    background-color: transparent;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -120,7 +128,7 @@ canvas {
     cursor: pointer;
 }
 #francois-dieleman {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     display: none;
     margin: 16px 20px 20px 20px;
     cursor: context-menu;
@@ -210,7 +218,6 @@ canvas {
     font-family: 'Overpass', sans-serif;
     letter-spacing: 1px;
     font-weight: 700;
-    /* text-align: left; */
 }
 .main-mobile #h2 {
     margin-left: 1.3rem;
@@ -220,7 +227,6 @@ canvas {
     letter-spacing: 2px;
     font-style: italic;
     font-weight: 900;
-    /* text-align: left; */
 }
 .main-mobile h1 {
     max-width: 80vw;
@@ -230,7 +236,6 @@ canvas {
     font-family: 'Overpass', sans-serif;
     letter-spacing: 2px;
     font-weight: 900;
-    /* text-align: left; */
 }
 .projects-section {
     padding-top: 7rem;
@@ -301,7 +306,6 @@ hr {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* height: 30vh; */
 }
 .vl {
     border-left: 1px solid rgb(224, 224, 224);
@@ -328,9 +332,7 @@ hr {
     color: white;
     text-align: center;
 }
-.about-me-content {
-    transform: translateY(30%);
-}
+
 .input-container {
     width: 50%;
     margin: 2rem 0;
@@ -407,207 +409,59 @@ hr {
     color: #dddddd;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* onscroll animation classes */
+.fade-in {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+.fade-in.on-scroll-active {
+    opacity: 1;
+}
+.from-left {
+    transform: translateY(0%);
+    transition: transform 400ms ease-in;
+}
+.from-left.on-scroll-active {
+    transform: translateY(30%);
+}
+.from-right {
+    transform: translateX(30%);
+    transition: transform 400ms ease-in;
+}
+.from-right.on-scroll-active {
+    transform: translateX(0%);
+}
+
+/* media queries */
 @media (min-width: 769px) {
     .main-mobile {
         display: none;
     }
 }
 @media(max-width: 768px){
+    .from-left {
+        transform: translateY(300%);
+        transition: transform 300ms ease-in;
+    }
+    .from-left.on-scroll-active {
+        transform: translateY(0%);
+    }
+    .from-right {
+        transform: translateY(20%);
+        transition: transform 300ms ease-in;
+    }
+    .from-right.on-scroll-active {
+        transform: translateY(0%);
+    }
     .projects-section #h2 {
         margin-top: 8rem;
+        font-size: 1.6rem;
     }
     .button-projects {
         margin-top: 40vh;
+    }
+    .button-projects a {
+        font-size: 0.9rem;
     }
     hr {
         padding-bottom: 3rem;
@@ -761,11 +615,10 @@ hr {
     }
 }
 
-
+/* programmer & web developer animation (front text on main-desktop) */
 .logo-main-desktop {
    animation: fill 0.7s ease forwards 1.4s;
 }
-/* programmer & web developer animation */
 .logo-main-desktop path:nth-child(1) {
     stroke-width: 1;
     stroke-dasharray: 100%;
@@ -928,6 +781,7 @@ hr {
     stroke-dashoffset: 100%;
 }
 
+/* animation for front text on main desktop  */
 @keyframes line-anim {
     to {
         stroke-dashoffset: 0%;
