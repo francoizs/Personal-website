@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Container, Col, Row } from 'reactstrap';
+import {  useNavigate } from "react-router-dom";
+import Windsurfing_kind from "./surfing_kind";
 
 
-export default class Surfing extends Component {
-    render() {
+function Surfing() {
         const front_title_styling = {
             fontSize: "2.5rem",
             color: "white",
@@ -38,15 +39,9 @@ export default class Surfing extends Component {
             width: '100%',
             paddingTop: '1rem',
         }
-
-        function Windsurfing() {
-            window.location.href = "./windsurfing";
-        }
-        function Kitesurfing() {
-            window.location.href = "./kitesurfing";
-        }
-        function Wingsurfing() {
-            window.location.href = "./wingsurfing";
+        const navigate = useNavigate();
+        const SurfingType=(type)=>{
+            navigate("/surfing_kind", { state: { surfing_type: type } });
         }
 
         return (
@@ -62,17 +57,17 @@ export default class Surfing extends Component {
                 </Row>
                 <Row className="align-items-center" style={ front_row_buttons_styling } >
                     <Col className="text-right">
-                        <button onClick={ Windsurfing } style={ front_button_styling } className="surfing-button" id="windsurfing-button"><span></span><a>Wind-Surfing</a></button>
+                        <button onClick={()=>{SurfingType('windsurfing')}} style={ front_button_styling } className="surfing-button" id="windsurfing-button"><span></span><a>Wind-Surfing</a></button>
                     </Col>
                     <Col className="text-center">
-                        <button onClick={ Kitesurfing } style={ front_button_styling } className="surfing-button" id="kitesurfing-button"><span></span>Kite-Surfing</button>
+                        <button onClick={()=>{SurfingType('kitesurfing')}} style={ front_button_styling } className="surfing-button" id="kitesurfing-button"><span></span>Kite-Surfing</button>
                     </Col>
                     <Col className="text-left">
-                        <button onClick={ Wingsurfing } style={ front_button_styling } className="surfing-button" id="wingsurfing-button"><span></span>Wing-Surfing</button>
+                        <button onClick={()=>{SurfingType('wingsurfing')}} style={ front_button_styling } className="surfing-button" id="wingsurfing-button"><span></span>Wing-Surfing</button>
                     </Col>
                 </Row>
             </Col>
         </Container>
         );
     }
-}
+export default Surfing;

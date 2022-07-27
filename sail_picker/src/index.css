@@ -74,13 +74,25 @@ button:active {
   background-size: cover;
   background-repeat: no-repeat;
 }
-#windsurfing-standard-button {
-  background-image: url('../public/images/pexels-sean-o\'brien-10140031.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+.type-button {
+  background-color: white;
+  color: black;
+  transition: 400ms;
 }
-#windsurfing-foil-button {
-  background-image: url('../public/images/foil_wind.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+.type-button:hover {
+  background-color: #3583a7;
+  color: white;
+}
+.skill-button {
+  margin-top: 4rem;
+  background-color: white;
+  color: black;
+  transition: 400ms;
+}
+.skill-button:hover {
+  background-color: #3583a7;
+  color: white;
+}
+#kitesurfing-beginner-button {
+  margin-top: 7rem;
 }
