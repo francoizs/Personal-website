@@ -55,31 +55,38 @@ function SurfingSkill() {
         }
 
         const navigate = useNavigate();
-        function Surfing_Kind (type, kind) {
-            navigate("/surfing_skill", { state: { surfing_type: type, surfing_kind: kind } });
+        function Result (type, kind, skill) {
+            navigate("/surfing_kind/surfing_skill/result", { state: { surfing_type: type, surfing_kind: kind, skill_level: skill } });
         }
         if (location.state.surfing_type === 'windsurfing') {
             return (
-            <Container fluid style={ front_container_styling }>
+                <Container fluid style={ front_container_styling }>
                 <Col>
                     <Row style={ logo_row_styling }>
                         <Col className="text-center">
-                            <a href="/"><img height={ 45 } src="./images/icons8-ocean-wave-50.png"alt="" /></a>
+                            <a href="/"><img height={ 45 } src="./images/icons8-ocean-wave-50.png" alt="" /></a>
                         </Col>
                     </Row>
                     <Row style={ front_title_container_styling }>
-                        <h1 style={ front_title_styling }>What skill-level are you?</h1>
+                        <h1 style={ front_title_styling }>What skill level are you?</h1>
                     </Row>
-                    <Row className="align-items-center" style={ front_row_buttons_styling } >
-                        <Col className="text-right">
-                            <button onClick={()=>{Surfing_Kind('windsurfing', 'standard')}} style={ front_button_styling } className="skill-button" id="windsurfing-standard-button"><span></span>Standard</button>
-                        </Col>
-                        <div className="col-1">
-                        </div>
-                        <Col className="text-left">
-                            <button onClick={()=>{Surfing_Kind('windsurfing', 'foil')}} style={ foil_styling } className="skill-button" id="windsurfing-foil-button"><span></span>Foil</button>
-                        </Col>
-                    </Row>
+                    <Col className="align-items-center" style={ front_row_buttons_styling } >
+                        <Row>
+                            <Col className="text-center">
+                                <button onClick={()=>{Result('windsurfing', location.state.surfing_kind, 'beginner')}} style={ beginner_styling } className="skill-button" id="windsurfing-beginner-button"><span></span>Beginner</button>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="text-center">
+                                <button onClick={()=>{Result('windsurfing', location.state.surfing_kind, 'intermediate')}} style={ front_button_styling } className="skill-button" id="windsurfing-intermediate-button"><span></span>Intermediate</button>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="text-center">
+                                <button onClick={()=>{Result('windsurfing', location.state.surfing_kind, 'pro')}} style={ pro_styling } className="skill-button" id="windsurfing-pro-button"><span></span>Pro</button>
+                            </Col>
+                        </Row>
+                    </Col>
                 </Col>
             </Container>
             );
@@ -98,17 +105,17 @@ function SurfingSkill() {
                     <Col className="align-items-center" style={ front_row_buttons_styling } >
                         <Row>
                             <Col className="text-center">
-                                <button onClick={()=>{Surfing_Kind('kitesurfing', 'standard')}} style={ beginner_styling } className="skill-button" id="kitesurfing-beginner-button"><span></span>Beginner</button>
+                                <button onClick={()=>{Result('kitesurfing', location.state.surfing_kind, 'beginner')}} style={ beginner_styling } className="skill-button" id="kitesurfing-beginner-button"><span></span>Beginner</button>
                             </Col>
                         </Row>
                         <Row>
                             <Col className="text-center">
-                                <button onClick={()=>{Surfing_Kind('kitesurfing', 'standard')}} style={ front_button_styling } className="skill-button" id="kitesurfing-intermediate-button"><span></span>Intermediate</button>
+                                <button onClick={()=>{Result('kitesurfing', location.state.surfing_kind, 'intermediate')}} style={ front_button_styling } className="skill-button" id="kitesurfing-intermediate-button"><span></span>Intermediate</button>
                             </Col>
                         </Row>
                         <Row>
                             <Col className="text-center">
-                                <button onClick={()=>{Surfing_Kind('kitesurfing', 'foil')}} style={ pro_styling } className="skill-button" id="kitesurfing-pro-button"><span></span>Pro</button>
+                                <button onClick={()=>{Result('kitesurfing', location.state.surfing_kind, 'pro')}} style={ pro_styling } className="skill-button" id="kitesurfing-pro-button"><span></span>Pro</button>
                             </Col>
                         </Row>
                     </Col>
@@ -117,26 +124,33 @@ function SurfingSkill() {
             );
         } else if (location.state.surfing_type === 'wingsurfing') {
             return (
-            <Container fluid style={ front_container_styling }>
+                <Container fluid style={ front_container_styling }>
                 <Col>
                     <Row style={ logo_row_styling }>
                         <Col className="text-center">
-                            <a href="/"><img height={ 45 } src="./images/icons8-ocean-wave-50.png"alt="" /></a>
+                            <a ><img height={ 45 } src="./images/icons8-ocean-wave-50.png"alt="" /></a>
                         </Col>
                     </Row>
                     <Row style={ front_title_container_styling }>
-                        <h1 style={ front_title_styling }>What kind of {location.state.surfing_type} are you going to do?</h1>
+                        <h1 style={ front_title_styling }>What skill level are you?</h1>
                     </Row>
-                    <Row className="align-items-center" style={ front_row_buttons_styling } >
-                        <Col className="text-right">
-                            <button onClick={()=>{Surfing_Kind('wingsurfing', 'standard')}} style={ front_button_styling } className="skill-button" id="wingsurfing-standard-button"><span></span>Standard</button>
-                        </Col>
-                        <div className="col-1">
-                        </div>
-                        <Col className="text-left">
-                            <button onClick={()=>{Surfing_Kind('wingsurfing', 'foil')}} style={ foil_styling } className="skill-button" id="wingsurfing-foil-button"><span></span>Foil</button>
-                        </Col>
-                    </Row>
+                    <Col className="align-items-center" style={ front_row_buttons_styling } >
+                        <Row>
+                            <Col className="text-center">
+                                <button onClick={()=>{Result('wingsurfing', location.state.surfing_kind, 'beginner')}} style={ beginner_styling } className="skill-button" id="wingsurfing-beginner-button"><span></span>Beginner</button>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="text-center">
+                                <button onClick={()=>{Result('wingsurfing', location.state.surfing_kind, 'intermediate')}} style={ front_button_styling } className="skill-button" id="wingsurfing-intermediate-button"><span></span>Intermediate</button>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="text-center">
+                                <button onClick={()=>{Result('wingsurfing', location.state.surfing_kind, 'pro')}} style={ pro_styling } className="skill-button" id="wingsurfing-pro-button"><span></span>Pro</button>
+                            </Col>
+                        </Row>
+                    </Col>
                 </Col>
             </Container>
             );

@@ -101,7 +101,7 @@ function SurfingKind() {
                 <Col>
                     <Row style={ logo_row_styling }>
                         <Col className="text-center">
-                            <a href="/"><img height={ 45 } src="./images/icons8-ocean-wave-50.png"alt="" /></a>
+                            <a href="/"><img height={ 45 } src="./images/icons8-ocean-wave-50.png" alt="" /></a>    
                         </Col>
                     </Row>
                     <Row style={ front_title_container_styling }>
