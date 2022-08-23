@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Container, Col, Row } from 'reactstrap';
 import {  useNavigate } from "react-router-dom";
-import Windsurfing_kind from "./surfing_kind";
 
 
 function Surfing() {

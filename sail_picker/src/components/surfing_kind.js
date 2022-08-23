@@ -43,7 +43,7 @@ function SurfingKind() {
 
         const navigate = useNavigate();
         function Surfing_Kind (type, kind) {
-            navigate("/surfing_kind/surfing_skill", { state: { surfing_type: type, surfing_kind: kind } });
+            navigate("/surfing_kind/details", { state: { surfing_type: type, surfing_kind: kind } });
         }
         if (location.state.surfing_type === 'windsurfing') {
             return (

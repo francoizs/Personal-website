@@ -1,0 +1,3 @@
+class Kitesurfing:
+    pass
+

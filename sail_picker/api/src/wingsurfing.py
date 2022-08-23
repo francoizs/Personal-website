@@ -1,0 +1,4 @@
+
+
+class Wingsurfing:
+    pass
