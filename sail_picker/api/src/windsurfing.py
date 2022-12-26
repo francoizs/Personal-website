@@ -1,4 +1,3 @@
-from unittest import result
 import numpy as np 
 from scipy.interpolate import griddata 
 
@@ -38,10 +37,9 @@ class Windsurfing:
     def results(self):
         if self.surfing_kind == 'standard':
             result = self.standard_results()
-            return result
         elif self.surfing_kind == 'foil':
             result = self.foil_results()
-            return result
+        return str(float(result))
 
     def interpolate(self, data):
         
@@ -87,9 +85,17 @@ class Windsurfing:
         return result
 
 
+    def foil_results(self):
+        result = self.standard_results()
+        return result - 0.5
+
 
     def standard_results(self):
         data = [self.weight, self.actual_knots]
         interpolated_result = self.interpolate(data)
-        result = round(interpolated_result[0], 1)
-        return result
+        result = interpolated_result[0]
+        if result > 4.5:
+            result += (result * 0.1)
+        else:
+            result -= (result * 0.1)
+        return round(result, 1)

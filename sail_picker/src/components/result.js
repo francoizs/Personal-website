@@ -38,6 +38,33 @@ function Result() {
     const front_title_container_styling = {
         marginTop: '6rem',
     }
+    const results_col_styling = {
+        display: 'flex',
+        color: 'white',
+        
+
+    }
+    const title_results = () => {
+        if (location.state.surfing_type === 'windsurfing') {
+            return (
+                <Row style={ front_title_container_styling }>
+                    <h1 style={ front_title_styling }>The best Windsurfing sail for you:</h1>
+                </Row>
+            )
+        } else if (location.state.surfing_type === 'kitesurfing') {
+            return (
+                <Row style={ front_title_container_styling }>
+                    <h1 style={ front_title_styling }>The best Kite for you:</h1>
+                </Row>
+            )
+        } else {
+            return (
+                <Row style={ front_title_container_styling }>
+                    <h1 style={ front_title_styling }>The best Wing for you:</h1>
+                </Row>
+            )
+        }
+    }
     return (
     <Container fluid style={ front_container_styling }>
         <Col>
@@ -46,12 +73,13 @@ function Result() {
                     <a href="/"><img height={ 45 } src="./images/icons8-ocean-wave-50.png"alt="" /></a>
                 </Col>
             </Row>
-            <Row style={ front_title_container_styling }>
-                <h1 style={ front_title_styling }>The sail options for you:</h1>
-            </Row>
+            { title_results() }
             <Row>
-                <Col className="text-center">
+                <Col style={ results_col_styling } className="text-center offset-3 col-5">
                     <p>{sailOption}</p> 
+                    <p>While following the data we've gathered, we believe that this is the best option for you. If you don't agree with this 
+                        option or think another option should be better, please contact us below or click <a href="/">here</a>.
+                    </p>
                 </Col>
             </Row>
         </Col>

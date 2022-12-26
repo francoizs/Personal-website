@@ -45,6 +45,9 @@ function Surfing() {
 
         return (
         <Container fluid style={ front_container_styling }>
+            <div className="back-button" style={{ display: 'flex' }}>
+                <i className="bi bi-arrow-left"></i>
+            </div>
             <Col>
                 <Row style={ logo_row_styling }>
                     <Col className="text-center">

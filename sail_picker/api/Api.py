@@ -17,8 +17,8 @@ def index():
 
     if surfing_type == 'windsurfing':
             return jsonify(Windsurfing(surfing_kind, average_knots, max_knots, weight).results())
-    # elif surfing_type == 'kitesurfing':
-    #         return jsonify(Kitesurfing(surfing_kind, average_knots, max_knots, weight))
+    elif surfing_type == 'kitesurfing':
+            return jsonify(Kitesurfing(surfing_kind, average_knots, max_knots, weight).results())
     # elif surfing_type == 'wingsurfing':
     #         return jsonify(Wingsurfing(surfing_kind, average_knots, max_knots, weight))
 
